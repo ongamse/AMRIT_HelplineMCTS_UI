@@ -178,7 +178,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
         //get mother data obj api
         this.callClosureService
           .getBenificiaryDetails({
-            czentrixCallID: this.callerID,
+            callId: this.callerID,
           })
           .subscribe(
             (response) => {
@@ -219,7 +219,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
                   providerServiceMapID:
                     this.getCommonData.currentService.serviceID,
                   outboundCallType: mctsdata.outboundCallType,
-                  czentrixCallID: this.callerID,
+                  callId: this.callerID,
                   createdBy: this.getCommonData.uname,
                   agentID: this.czentrixService.agent_id,
                   receivedRoleName: this.getCommonData.Role_Name,
@@ -593,7 +593,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
           beneficiaryRegID: this.benRegID,
           providerServiceMapID: this.getCommonData.currentService.serviceID,
           outboundCallType: this.getCommonData.benObj.outboundCallType,
-          czentrixCallID: eventData[2],
+          callId: eventData[2],
           createdBy: this.getCommonData.uname,
           agentID: this.czentrixService.agent_id,
           receivedRoleName: this.getCommonData.Role_Name,
