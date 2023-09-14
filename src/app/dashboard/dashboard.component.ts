@@ -208,8 +208,6 @@ export class dashboardContentClass implements OnInit {
   }
 
   handleEvent() {
-    const logMessage = `${String(this.eventSpiltData)} in dashboard`;
-console.log(logMessage);
     if (this.eventSpiltData[0] == "Accept" && this.eventSpiltData[2] != undefined && this.eventSpiltData[4] != undefined && this.eventSpiltData[4] == '1') {
       console.log("transfer event received, routing to inner page agent and then from their route to call screen");
       this.dataSettingService.onCall.next({
