@@ -39,13 +39,13 @@ export class StringValidator {
   allowText: string;
 
   inputFieldValidator = /^[a-zA-Z ]+$/;
-  textAreaValidator = /^[a-zA-Z0-9 ]+([a-zA-Z0-9,. ]+)*$/;
+  textAreaValidator = /^[a-zA-Z0-9]+([,. ][a-zA-Z0-9]+)*$/;
   questionnaireValidator = /^[a-zA-Z0-9.,? ]+$/;
   addressValidator = /^[a-zA-Z0-9.,/\-# ]+$/;
   smsTemplateValidator = /^[a-zA-Z0-9.,$\-:;/() ]+$/;
   itemNameSearchValidator = /^[a-zA-Z0-9% ]+$/;
   bloodBankUrlValidator = /^[a-zA-Z0-9.\-:/ ]+$/;
-  itemNameMasterValidator = /^[a-zA-Z0-9%-.[\]\/() ]+$/;
+  itemNameMasterValidator = /^[a-zA-Z0-9%\-\.\[\]\/() ]+$/;
   answerValidator = /^[a-zA-Z0-9.,/\- ]+$/;
   usernameValidator = /^[a-zA-Z0-9]+$/;
   searchIdValidator = /^[a-zA-Z0-9/]+$/;
