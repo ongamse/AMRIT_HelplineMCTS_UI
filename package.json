@@ -68,5 +68,6 @@
     "webpack": "2.6.1",
     "grunt": "1.0.3",
     "grunt-war": "0.5.1"
-  }
+  },
+  "repository": "https://github.com/PSMRI/HelplineMCTS-UI.git"
 }
