@@ -1,3 +1,26 @@
+/* 
+* AMRIT – Accessible Medical Records via Integrated Technology 
+* Integrated EHR (Electronic Health Records) Solution 
+*
+* Copyright (C) "Piramal Swasthya Management and Research Institute" 
+*
+* This file is part of AMRIT.
+*
+* This program is free software: you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation, either version 3 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program.  If not, see https://www.gnu.org/licenses/.
+*/
+
+
 import { Component, OnInit, OnChanges, OnDestroy } from "@angular/core";
 import { dataService } from "../services/dataService/data.service";
 import { Router, ActivatedRoute, Params } from "@angular/router";
@@ -155,7 +178,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
         //get mother data obj api
         this.callClosureService
           .getBenificiaryDetails({
-            czentrixCallID: this.callerID,
+            callId: this.callerID,
           })
           .subscribe(
             (response) => {
@@ -196,7 +219,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
                   providerServiceMapID:
                     this.getCommonData.currentService.serviceID,
                   outboundCallType: mctsdata.outboundCallType,
-                  czentrixCallID: this.callerID,
+                  callId: this.callerID,
                   createdBy: this.getCommonData.uname,
                   agentID: this.czentrixService.agent_id,
                   receivedRoleName: this.getCommonData.Role_Name,
@@ -570,7 +593,7 @@ export class MctsAgentOutbondcallComponent implements OnInit {
           beneficiaryRegID: this.benRegID,
           providerServiceMapID: this.getCommonData.currentService.serviceID,
           outboundCallType: this.getCommonData.benObj.outboundCallType,
-          czentrixCallID: eventData[2],
+          callId: eventData[2],
           createdBy: this.getCommonData.uname,
           agentID: this.czentrixService.agent_id,
           receivedRoleName: this.getCommonData.Role_Name,

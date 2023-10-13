@@ -4,14 +4,21 @@
   </div>
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 m-t-10" style="float:center">
     <p class="f-s-17">{{data.message}}</p>
-    <p *ngIf="data.kmFilePath"><a href="{{data?.kmFilePath}}" target="_blank">
-      {{currentLanguageSet?.clickHereForMoreInfo}}</a></p>
+    <p *ngIf="data.kmFilePath">
+      <a href="{{ data?.kmFilePath }}" target="_blank" rel="noopener noreferrer">
+        {{ currentLanguageSet?.clickHereForMoreInfo }}
+      </a>
+    </p>
+    
     
      
       <ul *ngIf="urls.length>0" class="list-unstyled">
         <li *ngIf="urls.length>1">{{currentLanguageSet?.referTheLinksBelow}}</li>
         <li *ngIf="urls.length===1">{{currentLanguageSet?.referTheLinkBelow}}</li>
-        <li *ngFor="let url of urls"><a target="_blank" href="{{url}}">{{url}}</a></li>
+        <li *ngFor="let url of urls">
+          <a target="_blank" href="{{ url }}" rel="noopener noreferrer">{{ url }}</a>
+        </li>
+        
       </ul>
     
   </div>
