@@ -15,7 +15,9 @@ jobs:
     - uses: actions/setup-node@v2
     - name: Build with NPM
       run: |
-            npm install --force
+            npm install
+            npm run build
+            mvn clean package
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
