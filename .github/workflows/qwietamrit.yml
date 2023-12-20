@@ -15,12 +15,6 @@ jobs:
     - uses: actions/setup-node@v2
     - name: Build with NPM
       run: |
-            npm config set legacy-peer-deps true
-            npm install -g @angular/cli
-            npm install -g grunt-cli
-            npm install typescript@2.7.2 --save-dev
-            npm install ng2-smart-table@1.2.1
-            npm install node-sass --force
             npm install --force
             npm run ng build --prod --aot && grunt- uses: actions/checkout@v2
     - name: Download ShiftLeft CLI
