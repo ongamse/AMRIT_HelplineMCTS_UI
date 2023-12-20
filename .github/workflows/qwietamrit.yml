@@ -16,7 +16,6 @@ jobs:
     - name: Build with NPM
       run: |
             npm install --force
-            npm run ng build --prod --aot && grunt- uses: actions/checkout@v2
     - name: Download ShiftLeft CLI
       run: |
         curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
