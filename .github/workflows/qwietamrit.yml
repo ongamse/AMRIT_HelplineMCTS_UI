@@ -16,7 +16,7 @@ jobs:
     uses: actions/setup-node@v2
     with:
         node-version: 16
-    name: Build with NPM
+    - name: Build with NPM
       run: |
             npm config set legacy-peer-deps true
             npm install -g @angular/cli
